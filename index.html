@@ -259,7 +259,8 @@
                     place: document.getElementById('reviewPlace').value.trim(),
                     rating: document.getElementById('reviewRating').value,
                     message: document.getElementById('reviewMessage').value.trim(),
-                    date: new Date().toLocaleDateString()
+                    date: new Date().toLocaleDateString(),
+                    source: 'pending'
                 };
 
                 const reviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
@@ -267,7 +268,7 @@
                 localStorage.setItem('himachalReviews', JSON.stringify(reviews));
 
                 reviewForm.reset();
-                alert('Thank you! Your review has been published.');
+                alert('Thank you! Your review has been submitted and is pending approval.');
             });
         }
     </script>
