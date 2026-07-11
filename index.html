@@ -3,88 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himachal-Yatra | Tourist Services</title>
+    <title>Himachal-Yatra | Premium Travel & Tour Services</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* --- CSS STYLES --- */
-        :root {
-            --primary-color: #2ea3f2;
-            --secondary-color: #1a2b4c;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
-            --white: #ffffff;
-            --whatsapp-color: #25D366;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        header {
-            background-color: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        .btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background-color: #1c8bd6;
-        }
-
-        /* Hero Section */
-        #hero {
-            height: 80vh;
-            background: linear-gradient(rgba(26, 43, 76, 0.6), rgba(26, 43, 76, 0.6)), url('https://placehold.co/1920x1080/2ea3f2/FFF?text=Beautiful+Landscape') center/cover;
+        .hero-banner {
+            height: 75vh;
+            background: linear-gradient(rgba(26, 43, 76, 0.55), rgba(26, 43, 76, 0.55)), url('https://placehold.co/1920x1080/1a2b4c/FFF?text=Himachal+Valleys') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -93,490 +17,80 @@
             color: var(--white);
             padding: 0 20px;
         }
-
-        #hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        #hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        /* Search Bar */
-        .search-container {
-            background: var(--white);
-            padding: 10px;
-            border-radius: 8px;
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .search-container input, .search-container select {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            flex: 1;
-            outline: none;
-        }
-
-        /* Section Settings */
-        section {
-            padding: 5rem 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 3rem;
-        }
-
-        /* Destinations Cards */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-content h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .card-price {
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .service-box {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 3rem 5% 1rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .footer-content h4 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .footer-content ul {
-            list-style: none;
-        }
-
-        .footer-content ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-content a {
-            color: #ddd;
-            text-decoration: none;
-        }
-
-        .footer-content a:hover {
-            color: var(--white);
-        }
-
-        /* --- NEW: Floating Contact Dialog Styles --- */
-        .floating-contact-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--primary-color);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .floating-contact-btn:hover {
-            transform: scale(1.1);
-            background-color: #1c8bd6;
-        }
-
-        .contact-dialog {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: var(--white);
-            width: 300px;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            overflow: hidden;
-        }
-
-        .contact-dialog.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dialog-header {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .dialog-header h4 {
-            font-size: 1.1rem;
-        }
-
-        .close-btn {
-            font-size: 24px;
-            cursor: pointer;
-            line-height: 1;
-            transition: color 0.3s;
-        }
-
-        .close-btn:hover {
-            color: var(--primary-color);
-        }
-
-        .dialog-body {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .dialog-body p {
-            margin-bottom: 15px;
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        .dialog-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .action-btn {
-            padding: 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: opacity 0.3s, transform 0.2s;
-        }
-
-        .action-btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        .call-btn {
-            background-color: var(--primary-color);
-        }
-
-        .wa-btn {
-            background-color: var(--whatsapp-color);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 1rem; }
-            nav ul { flex-wrap: wrap; justify-content: center; }
-            .search-container { flex-direction: column; }
-            #hero h1 { font-size: 2.5rem; }
-            /* Adjust dialog for mobile */
-            .contact-dialog { right: 5%; left: 5%; width: 90%; bottom: 100px; }
-        }
+        .hero-banner h1 { font-size: 3.8rem; margin-bottom: 1rem; font-weight: 800; }
+        .hero-banner p { font-size: 1.3rem; margin-bottom: 2.5rem; max-width: 650px; opacity: 0.95; }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo"> Himachal-Yatra</a>
+        <a href="index.html" class="logo">Himachal-Yatra</a>
         <nav>
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#destinations">Packages</a></li>
-                <li><a href="#customize">Customize</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="btn">Book Now</a>
+        <a href="contact.html" class="btn">Book Now</a>
     </header>
 
-    <section id="hero">
-        <h1>Discover Your Next Adventure</h1>
-        <p>Explore the world's most beautiful destinations with our premium tourist services and guided tours.</p>
-    </section>
+    <main>
+        <section class="hero-banner">
+            <h1>Experience Stunning Himachal</h1>
+            <p>Tailored itineraries, comfortable stays, and unforgettable private tours across the Queen of Hills, Kullu-Manali, and beyond.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="packages.html" class="btn">View Packages</a>
+                <a href="customize.html" class="btn btn-secondary">Plan Custom Trip</a>
+            </div>
+        </section>
 
-    <section id="destinations">
-        <h2 class="section-title">Our Packages</h2>
-        <div class="grid-container">
-            <div class="card">
-                <img src="https://placehold.co/600x400/ccc/555?text=Shimla+Queen+of+Hills" alt="Shimla: Queen of Hills">
+        <!-- Dynamic Value Proposition Section -->
+        <section style="background: var(--white);">
+            <h2 class="section-title">Why Travel With Us</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); text-align: center;">
                 <div class="card-content">
-                    <h3>Shimla: 5-Day Queen of Hills Experience</h3>
-                    <span class="card-price">From ₹10,500 - ₹22,000</span>
-                    <p>Enjoy Shimla's colonial charm, mountain views, apple orchards, and serene hilltop escapes with premium stay and private excursions.</p>
-                    <br>
-                    <div style="display: flex; gap: 1rem;">
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Shimla: 5-Day Queen of Hills Itinerary:\n\n🌲 Day 1: Arrival & The Mall Road - Check in, evening stroll on Mall Road, colonial architecture.\n\n🌲 Day 2: Heritage & Local Sightseeing - Jakhu Temple, Viceregal Lodge, The Ridge, Christ Church.\n\n🌲 Day 3: Kufri & Fagu Valley - Himalayan Nature Park, horse ride to Mahasu Peak, apple orchards.\n\n🌲 Day 4: Mashobra & Naldehra Excursion - Pine roads, scenic golf course, nature walks.\n\n🌲 Day 5: Departure - Lakkar Bazaar shopping, scenic descent, journey home.\n\n✅ Includes: 4 Nights Shimla Stay, Breakfast & Dinner, Private Cab, Pickup/Drop from Chandigarh/Kalka.\n❌ Excludes: Entry tickets, Pony rides, Lunches, Travel Insurance.');">📖 Details</button>
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                    </div>
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏔️</div>
+                    <h3>Local Mountain Experts</h3>
+                    <p>Born and raised in Himachal, our drivers and hosts know the safest routes and hidden scenic viewpoints.</p>
+                </div>
+                <div class="card-content">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🚗</div>
+                    <h3>Complete Private Comfort</h3>
+                    <p>No group sharing hassle. Enjoy a private dedicated vehicle, pre-booked premium hotel stays, and custom pacing.</p>
+                </div>
+                <div class="card-content">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌟</div>
+                    <h3>Zero Hidden Costs</h3>
+                    <p>Clear inclusion and exclusion breakdowns. What we quote is exactly what you get, zero surprise updates mid-trip.</p>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/ccc/555?text=Manali+Kullu" alt="Manali & Kullu">
-                <div class="card-content">
-                    <h3>Manali & Kullu: 5-Day Adventure</h3>
-                    <span class="card-price">From ₹12,000 - ₹25,000</span>
-                    <p>Explore the best of Manali and Kullu with mountain temples, adventure sports, river rafting, and scenic village tours.</p>
-                    <br>
-                    <div style="display: flex; gap: 1rem;">
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Manali & Kullu: 5-Day Itinerary:\n\n🏔️ Day 1: Arrival in Manali - Transfer from Chandigarh/Bhuntar, Hadimba Temple, Vashishtha hot springs.\n\n🏔️ Day 2: Solang Valley Excursion - Paragliding, zorbing, ATV rides, optional Rohtang Pass (if open).\n\n🏔️ Day 3: Kullu & Manikaran Sahib - River rafting, shawl factory, Gurudwara Manikaran hot springs.\n\n🏔️ Day 4: Old Manali & Local Cafes - Explore Old Manali, Manali Sanctuary, Mall Road shopping.\n\n🏔️ Day 5: Departure - Riverside breakfast and transfer back to airport/railway station.\n\n✅ Includes: 4 Nights Premium Manali Hotel Stay, Breakfast & Dinner, Private Cab, Fuel, Parking, Driver Fees.\n❌ Excludes: Adventure Fees, Rohtang Pass Permit, Personal Expenses, Air/Train Fare.');">📖 Details</button>
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/ccc/555?text=Dharamshala+Mcleodganj" alt="Dharamshala & Mcleodganj">
-                <div class="card-content">
-                    <h3>Dharamshala & Mcleodganj: 5-Day Spiritual Retreat</h3>
-                    <span class="card-price">From ₹11,000 - ₹23,000</span>
-                    <p>Discover spiritual serenity with mountain temples, waterfalls, tea gardens, historic forts, and Tibetan culture.</p>
-                    <br>
-                    <div style="display: flex; gap: 1rem;">
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Dharamshala & Mcleodganj: 5-Day Itinerary:\n\n☸️ Day 1: Arrival & Mcleodganj Highlights - Tsuglagkhang Complex, Dalai Lama Temple, Mall Road.\n\n☸️ Day 2: Waterfalls & Scenic Views - Bhagsunag Waterfall, Bhagsunag Temple, Naddi View Point sunset.\n\n☸️ Day 3: Cricket & Culture - HPCA Stadium, Dharamshala Tea Gardens, War Memorial.\n\n☸️ Day 4: Kangra Valley Excursion - Kangra Fort, Norbulingka Institute.\n\n☸️ Day 5: Departure - St. John in the Wilderness church, transfer to Pathankot/Dharamshala airport.\n\n✅ Includes: 4 Nights Stay, Breakfast & Dinner, Private Cab, Driver Allowances & Taxes.\n❌ Excludes: Train/Flight, Entry Fees, Adventure Activities, Personal Expenses.');">📖 Details</button>
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/ccc/555?text=Spiti+Valley" alt="Spiti Valley">
-                <div class="card-content">
-                    <h3>Spiti Valley: 5-Day High Altitude Expedition</h3>
-                    <span class="card-price">From ₹14,000 - ₹28,000</span>
-                    <p>Journey through the dramatic landscapes of Spiti Valley with high-altitude monasteries, remote villages, and camping under the stars.</p>
-                    <br>
-                    <div style="display: flex; gap: 1rem;">
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Spiti Valley: 5-Day High Altitude Expedition Itinerary:\n\n🚙 Day 1: Manali to Kaza - Through Atal Tunnel and Kunzum Pass, acclimatize in Kaza.\n\n🚙 Day 2: Monasteries & Canyons - Key Monastery, Chicham Bridge, Kibber village.\n\n🚙 Day 3: The High Villages Circuit - Langza Buddha, Hikkim Post Office, Komic Monastery.\n\n🚙 Day 4: Kaza to Chandratal - Drive to Chandratal, hike to the crescent-shaped lake, camp under the stars.\n\n🚙 Day 5: Departure to Manali - Morning at the campsite then scenic drive back to Manali.\n\n✅ Includes: 3 Nights in Kaza, 1 Night Camping at Chandratal, Breakfast & Dinner, SUV with Expert Driver.\n❌ Excludes: Permits, Transit Lunches, Oxygen Cylinder Rental, Travel to Manali.');">📖 Details</button>
-                        <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="customize" style="background-color: var(--primary-color); color: white;">
-        <h2 class="section-title" style="color: white;">Customize Your Tour</h2>
-        <div style="text-align: center; padding: 2rem;">
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Looking for something unique? Let our agents create the perfect itinerary tailored to your needs and preferences.</p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
-                <a href="tel:+916280700763" class="btn" style="background-color: var(--secondary-color); text-decoration: none; padding: 0.8rem 1.5rem; font-size: 1rem;">📞 Call Our Agent</a>
-                <a href="https://wa.me/916280700763" target="_blank" class="btn" style="background-color: var(--whatsapp-color); text-decoration: none; padding: 0.8rem 1.5rem; font-size: 1rem;">📱 Connect via WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" style="background-color: var(--white);">
-        <h2 class="section-title">Why Choose Us</h2>
-        <div class="services-grid">
-            <div class="service-box">
-                <div class="service-icon">�</div>
-                <h3>Personalized Experience</h3>
-                <p>Every journey is tailored to your preferences and interests for a unique adventure.</p>
-            </div>
-            <div class="service-box">
-                <div class="service-icon">📋</div>
-                <h3>Customized Plan</h3>
-                <p>We create bespoke itineraries designed specifically to match your travel dreams.</p>
-            </div>
-            <div class="service-box">
-                <div class="service-icon">⭐</div>
-                <h3>Best Service</h3>
-                <p>Award-winning customer support and professional expertise at every step of your journey.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-content">
-            <div>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
                 <h4>Himachal-Yatra</h4>
-                <p>Making your travel dreams a reality since 2015. Your journey begins with us.</p>
+                <p style="opacity: 0.8;">Creating seamless travel memories through the majestic landscapes of North India since 2015.</p>
             </div>
-            <div>
+            <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#destinations">Tours</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="packages.html">All Tour Packages</a></li>
+                    <li><a href="customize.html">Custom Trip Planner</a></li>
+                    <li><a href="contact.html">Support Desk</a></li>
                 </ul>
             </div>
-            <div>
-                <h4>Contact Us</h4>
-                <ul>
-                    <li>📞 +91 6280700763</li>
-                    <li>📱 WhatsApp: +91 6280700763</li>
-                    <li>👤 Manish</li>
-                    <li>✉️ himachalyatra@gmail.com</li>
-                    <li>📍 Bilaspur, Himachal Pradesh</li>
-                </ul>
+            <div class="footer-col">
+                <h4>Head Office</h4>
+                <p style="opacity: 0.8; line-height: 1.8;">📍 Bilaspur, Himachal Pradesh<br>📞 +91 6280700763<br>✉️ himachalyatra@gmail.com</p>
             </div>
         </div>
-        <hr style="border-color: rgba(255,255,255,0.1); margin-bottom: 1rem;">
-        <p>&copy; 2026 Himachal-Yatra Travel Services. All rights reserved.</p>
+        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem;">
+        <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">&copy; 2026 Himachal-Yatra Travel Services. All rights reserved.</p>
     </footer>
 
-    <div class="floating-contact-btn" id="contactBtn">
-        💬
-    </div>
-
-    <div class="contact-dialog" id="contactDialog">
-        <div class="dialog-header">
-            <h4>Need Help?</h4>
-            <span class="close-btn" id="closeDialog">&times;</span>
-        </div>
-        <div class="dialog-body">
-            <p>How would you like to reach us?</p>
-            <div class="dialog-actions">
-                <a href="tel:+916280700763" class="action-btn call-btn">📞 Request a Call</a>
-                <a href="https://wa.me/916280700763" target="_blank" class="action-btn wa-btn">📱 WhatsApp Us</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // --- Contact Dialog Logic ---
-        const contactBtn = document.getElementById('contactBtn');
-        const contactDialog = document.getElementById('contactDialog');
-        const closeDialog = document.getElementById('closeDialog');
-
-        // Function to open dialog
-        function openContactDialog() {
-            contactDialog.classList.add('active');
-        }
-
-        // Function to close dialog
-        function closeContactDialog() {
-            contactDialog.classList.remove('active');
-        }
-
-        // Toggle dialog from floating button
-        if (contactBtn) {
-            contactBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                contactDialog.classList.toggle('active');
-            });
-        }
-
-        // Close dialog via X button
-        if (closeDialog) {
-            closeDialog.addEventListener('click', () => {
-                closeContactDialog();
-            });
-        }
-
-        // Close dialog if clicking anywhere outside of it
-        document.addEventListener('click', (event) => {
-            if (contactDialog.classList.contains('active') && 
-                !contactDialog.contains(event.target) && 
-                !contactBtn.contains(event.target) &&
-                event.target.className !== 'btn') {
-                closeContactDialog();
-            }
-        });
-        
-        // Prevent dialog clicks from bubbling to document
-        if (contactDialog) {
-            contactDialog.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        }
-    </script>
 </body>
 </html>
