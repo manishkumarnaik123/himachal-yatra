@@ -79,7 +79,7 @@ nav a:hover {
 
 #hero {
     min-height: 80vh;
-    background: linear-gradient(rgba(26, 43, 76, 0.6), rgba(26, 43, 76, 0.6)), url('https://placehold.co/1920x1080/2ea3f2/FFF?text=Beautiful+Landscape') center/cover;
+    background: linear-gradient(rgba(26, 43, 76, 0.6), rgba(26, 43, 76, 0.6)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80') center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +222,7 @@ section {
 }
 
 .page-hero {
-    background: linear-gradient(rgba(26, 43, 76, 0.7), rgba(26, 43, 76, 0.7)), url('https://placehold.co/1920x800/2ea3f2/FFF?text=Himachal+Packages') center/cover;
+    background: linear-gradient(rgba(26, 43, 76, 0.7), rgba(26, 43, 76, 0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80') center/cover;
     color: var(--white);
     text-align: center;
     min-height: 40vh;
