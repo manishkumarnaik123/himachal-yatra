@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Rajesh Kumar",
+    "place": "Shimla 5-Day Queen of Hills Experience",
+    "rating": "5",
+    "message": "Absolutely incredible experience! The views from Kufri were breathtaking, and our guide was very knowledgeable about the local history. The hotel arrangements were perfect, and the food was delicious. Highly recommend this package!",
+    "date": "7/10/2026"
+  },
+  {
+    "name": "Priya Sharma",
+    "place": "Manali & Kullu 5-Day Adventure",
+    "rating": "5",
+    "message": "Best adventure trip ever! The paragliding at Solang Valley was thrilling, and the river rafting in Kullu was so much fun. Our driver was very helpful and safe. Worth every rupee spent!",
+    "date": "7/8/2026"
+  },
+  {
+    "name": "Arun Singh",
+    "place": "Dharamshala & McLeodganj 5-Day Spiritual Retreat",
+    "rating": "4",
+    "message": "Beautiful destination with serene vibes. The Dalai Lama Temple was very peaceful, and the waterfalls were stunning. Only downside was one day had light rain, but it didn't dampen the experience. Great value for money!",
+    "date": "7/5/2026"
+  },
+  {
+    "name": "Neha Verma",
+    "place": "Spiti Valley 5-Day High Altitude Expedition",
+    "rating": "5",
+    "message": "Once in a lifetime experience! Chandratal was magical under the stars, and the monasteries were incredibly spiritual. The SUV was comfortable even on rough roads. Our driver handled the altitude perfectly. Absolutely worth it!",
+    "date": "6/28/2026"
+  },
+  {
+    "name": "Amit Patel",
+    "place": "Shimla 5-Day Queen of Hills Experience",
+    "rating": "4",
+    "message": "Really enjoyed the heritage walks and the local culture. Jakhu Temple was amazing! The only thing I would change is the Mall Road could be explored more at leisure. Overall excellent service and hospitality!",
+    "date": "6/20/2026"
+  }
+]
