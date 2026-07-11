@@ -99,7 +99,7 @@
         <p style="text-align: center; margin-bottom: 2rem; color: #555; font-size: 1.1rem;">We'd love to hear about your Himachal adventure! Leave a review and help other travelers discover their perfect journey.</p>
         <div class="review-form-box">
             <form id="reviewForm">
-                <div class="form-row">
+                <div class="form-grid">
                     <div class="form-group">
                         <label for="reviewName">Your Name</label>
                         <input type="text" id="reviewName" placeholder="Enter your full name" required>
@@ -110,26 +110,21 @@
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="reviewRating">Rating</label>
-                        <select id="reviewRating" required>
-                            <option value="">Select your rating</option>
-                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-                            <option value="4">⭐⭐⭐⭐ Good</option>
-                            <option value="3">⭐⭐⭐ Average</option>
-                            <option value="2">⭐⭐ Fair</option>
-                            <option value="1">⭐ Poor</option>
-                        </select>
-                    </div>
-                    <div class="form-group"></div>
+                <div class="form-group">
+                    <label for="reviewRating">Rating</label>
+                    <select id="reviewRating" required>
+                        <option value="">Select your rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ Good</option>
+                        <option value="3">⭐⭐⭐ Average</option>
+                        <option value="2">⭐⭐ Fair</option>
+                        <option value="1">⭐ Poor</option>
+                    </select>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group full-width">
-                        <label for="reviewMessage">Your Review</label>
-                        <textarea id="reviewMessage" placeholder="Share your experience... What did you enjoy most? Any suggestions for improvement?" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="reviewMessage">Your Review</label>
+                    <textarea id="reviewMessage" placeholder="Share your experience... What did you enjoy most? Any suggestions for improvement?" required></textarea>
                 </div>
 
                 <div class="form-actions">
