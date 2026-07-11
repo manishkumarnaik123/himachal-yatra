@@ -58,28 +58,61 @@
     <script>
         const reviewsList = document.getElementById('reviewsList');
 
-        function renderReviews() {
-            const reviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
+        async function renderReviews() {
+            try {
+                // Fetch approved reviews from JSON file
+                const response = await fetch('data/reviews.json');
+                const approvedReviews = response.ok ? await response.json() : [];
+                
+                // Get pending reviews from localStorage
+                const pendingReviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
+                
+                // Combine both (pending first, then approved)
+                const allReviews = [...pendingReviews, ...approvedReviews];
 
-            if (!reviews.length) {
-                reviewsList.innerHTML = '<div class="empty-state"><h3>No reviews yet</h3><p>Be the first traveler to share your experience.</p></div>';
-                return;
+                if (!allReviews.length) {
+                    reviewsList.innerHTML = '<div class="empty-state"><h3>No reviews yet</h3><p>Be the first traveler to share your experience.</p></div>';
+                    return;
+                }
+
+                reviewsList.innerHTML = allReviews.map((review) => {
+                    const stars = '★'.repeat(Number(review.rating || 5));
+                    const status = review.source === 'pending' ? '<span style="font-size: 0.85rem; color: #f97316; margin-left: 0.5rem;">(Pending Approval)</span>' : '';
+                    return `
+                        <article class="review-card">
+                            <div class="review-card-top">
+                                <h3>${review.name}${status}</h3>
+                                <span class="review-rating">${stars}</span>
+                            </div>
+                            <p class="review-place">${review.place}</p>
+                            <p>${review.message}</p>
+                            <span class="review-date">${review.date}</span>
+                        </article>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+                const pendingReviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
+                if (!pendingReviews.length) {
+                    reviewsList.innerHTML = '<div class="empty-state"><h3>No reviews yet</h3><p>Be the first traveler to share your experience.</p></div>';
+                    return;
+                }
+                // Fallback to just pending reviews
+                reviewsList.innerHTML = pendingReviews.map((review) => {
+                    const stars = '★'.repeat(Number(review.rating || 5));
+                    return `
+                        <article class="review-card">
+                            <div class="review-card-top">
+                                <h3>${review.name}</h3>
+                                <span class="review-rating">${stars}</span>
+                            </div>
+                            <p class="review-place">${review.place}</p>
+                            <p>${review.message}</p>
+                            <span class="review-date">${review.date}</span>
+                        </article>
+                    `;
+                }).join('');
             }
-
-            reviewsList.innerHTML = reviews.map((review) => {
-                const stars = '★'.repeat(Number(review.rating || 5));
-                return `
-                    <article class="review-card">
-                        <div class="review-card-top">
-                            <h3>${review.name}</h3>
-                            <span class="review-rating">${stars}</span>
-                        </div>
-                        <p class="review-place">${review.place}</p>
-                        <p>${review.message}</p>
-                        <span class="review-date">${review.date}</span>
-                    </article>
-                `;
-            }).join('');
         }
 
         renderReviews();
