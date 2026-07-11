@@ -3,90 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Packages | Himachal-Yatra</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Himachal-Yatra | Packages</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo">Himachal-Yatra</a>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="packages.html" class="active">Packages</a></li>
-                <li><a href="customize.html">Customize</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#packages">Packages</a></li>
+                <li><a href="index.html#customize">Customize</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="contact.html" class="btn">Book Now</a>
+        <a href="index.html#contact" class="btn">Book Now</a>
     </header>
 
-    <main>
-        <section id="destinations">
-            <h2 class="section-title">Our Packages</h2>
-            <div class="grid-container">
-                
-                <!-- Package 1: Shimla -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/ccc/555?text=Shimla+Queen+of+Hills" alt="Shimla: Queen of Hills">
-                    <div class="card-content">
-                        <h3>Shimla: 5-Day Queen of Hills Experience</h3>
-                        <span class="price-tag">From ₹10,500 - ₹22,000</span>
-                        <p style="margin-bottom: 1.5rem; color: #333;">Enjoy Shimla's colonial charm, mountain views, apple orchards, and serene hilltop escapes with premium stay and private excursions.</p>
-                        <div style="display: flex; gap: 1rem;">
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Shimla: 5-Day Queen of Hills Itinerary:\n\n🌲 Day 1: Arrival & The Mall Road - Check in, evening stroll on Mall Road, colonial architecture.\n\n🌲 Day 2: Heritage & Local Sightseeing - Jakhu Temple, Viceregal Lodge, The Ridge, Christ Church.\n\n🌲 Day 3: Kufri & Fagu Valley - Himalayan Nature Park, horse ride to Mahasu Peak, apple orchards.\n\n🌲 Day 4: Mashobra & Naldehra Excursion - Pine roads, scenic golf course, nature walks.\n\n🌲 Day 5: Departure - Lakkar Bazaar shopping, scenic descent, journey home.\n\n✅ Includes: 4 Nights Shimla Stay, Breakfast & Dinner, Private Cab, Pickup/Drop from Chandigarh/Kalka.\n❌ Excludes: Entry tickets, Pony rides, Lunches, Travel Insurance.');">📖 Details</button>
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Package 2: Manali & Kullu -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/ccc/555?text=Manali+Kullu" alt="Manali & Kullu">
-                    <div class="card-content">
-                        <h3>Manali & Kullu: 5-Day Adventure</h3>
-                        <span class="price-tag">From ₹12,000 - ₹25,000</span>
-                        <p style="margin-bottom: 1.5rem; color: #333;">Explore the best of Manali and Kullu with mountain temples, adventure sports, river rafting, and scenic village tours.</p>
-                        <div style="display: flex; gap: 1rem;">
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Manali & Kullu: 5-Day Itinerary:\n\n🏔️ Day 1: Arrival in Manali - Transfer from Chandigarh/Bhuntar, Hadimba Temple, Vashishtha hot springs.\n\n🏔️ Day 2: Solang Valley Excursion - Paragliding, zorbing, ATV rides, optional Rohtang Pass (if open).\n\n🏔️ Day 3: Kullu & Manikaran Sahib - River rafting, shawl factory, Gurudwara Manikaran hot springs.\n\n🏔️ Day 4: Old Manali & Local Cafes - Explore Old Manali, Manali Sanctuary, Mall Road shopping.\n\n🏔️ Day 5: Departure - Riverside breakfast and transfer back to airport/railway station.\n\n✅ Includes: 4 Nights Premium Manali Hotel Stay, Breakfast & Dinner, Private Cab, Fuel, Parking, Driver Fees.\n❌ Excludes: Adventure Fees, Rohtang Pass Permit, Personal Expenses, Air/Train Fare.');">📖 Details</button>
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Package 3: Dharamshala & Mcleodganj -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/ccc/555?text=Dharamshala+Mcleodganj" alt="Dharamshala & Mcleodganj">
-                    <div class="card-content">
-                        <h3>Dharamshala & Mcleodganj: 5-Day Spiritual Retreat</h3>
-                        <span class="price-tag">From ₹11,000 - ₹23,000</span>
-                        <p style="margin-bottom: 1.5rem; color: #333;">Discover spiritual serenity with mountain temples, waterfalls, tea gardens, historic forts, and Tibetan culture.</p>
-                        <div style="display: flex; gap: 1rem;">
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Dharamshala & Mcleodganj: 5-Day Itinerary:\n\n☸️ Day 1: Arrival & Mcleodganj Highlights - Tsuglagkhang Complex, Dalai Lama Temple, Mall Road.\n\n☸️ Day 2: Waterfalls & Scenic Views - Bhagsunag Waterfall, Bhagsunag Temple, Naddi View Point sunset.\n\n☸️ Day 3: Cricket & Culture - HPCA Stadium, Dharamshala Tea Gardens, War Memorial.\n\n☸️ Day 4: Kangra Valley Excursion - Kangra Fort, Norbulingka Institute.\n\n☸️ Day 5: Departure - St. John in the Wilderness church, transfer to Pathankot/Dharamshala airport.\n\n✅ Includes: 4 Nights Stay, Breakfast & Dinner, Private Cab, Driver Allowances & Taxes.\n❌ Excludes: Train/Flight, Entry Fees, Adventure Activities, Personal Expenses.');">📖 Details</button>
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Package 4: Spiti Valley -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/ccc/555?text=Spiti+Valley" alt="Spiti Valley">
-                    <div class="card-content">
-                        <h3>Spiti Valley: 5-Day High Altitude Expedition</h3>
-                        <span class="price-tag">From ₹14,000 - ₹28,000</span>
-                        <p style="margin-bottom: 1.5rem; color: #333;">Journey through the dramatic landscapes of Spiti Valley with high-altitude monasteries, remote villages, and camping under the stars.</p>
-                        <div style="display: flex; gap: 1rem;">
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="alert('📅 Spiti Valley: 5-Day High Altitude Expedition Itinerary:\n\n🚙 Day 1: Manali to Kaza - Through Atal Tunnel and Kunzum Pass, acclimatize in Kaza.\n\n🚙 Day 2: Monasteries & Canyons - Key Monastery, Chicham Bridge, Kibber village.\n\n🚙 Day 3: The High Villages Circuit - Langza Buddha, Hikkim Post Office, Komic Monastery.\n\n🚙 Day 4: Kaza to Chandratal - Drive to Chandratal, hike to the crescent-shaped lake, camp under the stars.\n\n🚙 Day 5: Departure to Manali - Morning at the campsite then scenic drive back to Manali.\n\n✅ Includes: 3 Nights in Kaza, 1 Night Camping at Chandratal, Breakfast & Dinner, SUV with Expert Driver.\n❌ Excludes: Permits, Transit Lunches, Oxygen Cylinder Rental, Travel to Manali.');">📖 Details</button>
-                            <button class="btn" style="flex: 1; text-align:center; cursor: pointer; border: none; font-weight: bold; padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="document.getElementById('contactDialog').classList.add('active');">🎯 Book Now</button>
-                        </div>
-                    </div>
-                </div>
+    <section class="page-hero">
+        <h1>Explore Our Packages</h1>
+        <p>Choose from scenic hill-station escapes, adventure trips, and spiritual getaways across Himachal Pradesh.</p>
+    </section>
 
+    <section class="page-section">
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://placehold.co/600x400/ccc/555?text=Shimla+Queen+of+Hills" alt="Shimla">
+                <div class="card-content">
+                    <h3>Shimla: 5-Day Queen of Hills Experience</h3>
+                    <span class="card-price">From ₹10,500 - ₹22,000</span>
+                    <p>Enjoy Shimla's colonial charm, mountain views, apple orchards, and serene hilltop escapes.</p>
+                    <a href="index.html#contact" class="btn full-width">Book This Package</a>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
+            <div class="card">
+                <img src="https://placehold.co/600x400/ccc/555?text=Manali+Kullu" alt="Manali & Kullu">
+                <div class="card-content">
+                    <h3>Manali & Kullu: 5-Day Adventure</h3>
+                    <span class="card-price">From ₹12,000 - ₹25,000</span>
+                    <p>Explore mountain temples, adventure sports, river rafting, and scenic village tours.</p>
+                    <a href="index.html#contact" class="btn full-width">Book This Package</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x400/ccc/555?text=Dharamshala+Mcleodganj" alt="Dharamshala & McLeodganj">
+                <div class="card-content">
+                    <h3>Dharamshala & McLeodganj: 5-Day Spiritual Retreat</h3>
+                    <span class="card-price">From ₹11,000 - ₹23,000</span>
+                    <p>Discover spiritual serenity with waterfalls, tea gardens, a historic fort, and Tibetan culture.</p>
+                    <a href="index.html#contact" class="btn full-width">Book This Package</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/600x400/ccc/555?text=Spiti+Valley" alt="Spiti Valley">
+                <div class="card-content">
+                    <h3>Spiti Valley: 5-Day High Altitude Expedition</h3>
+                    <span class="card-price">From ₹14,000 - ₹28,000</span>
+                    <p>Journey through dramatic landscapes with monasteries, remote villages, and stargazing camps.</p>
+                    <a href="index.html#contact" class="btn full-width">Book This Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
         <div class="footer-content">
             <div>
                 <h4>Himachal-Yatra</h4>
@@ -95,10 +78,9 @@
             <div>
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="packages.html">Tours</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#packages">Tours</a></li>
+                    <li><a href="package.html">Packages</a></li>
                 </ul>
             </div>
             <div>
@@ -106,65 +88,11 @@
                 <ul>
                     <li>📞 +91 6280700763</li>
                     <li>📱 WhatsApp: +91 6280700763</li>
-                    <li>👤 Manish</li>
                     <li>✉️ himachalyatra@gmail.com</li>
-                    <li>📍 Bilaspur, Himachal Pradesh</li>
                 </ul>
             </div>
         </div>
-        <hr style="border-color: rgba(255,255,255,0.1); margin-bottom: 1rem;">
         <p>&copy; 2026 Himachal-Yatra Travel Services. All rights reserved.</p>
     </footer>
-
-    <!-- Floating Contact Dialog -->
-    <div class="floating-contact-btn" id="contactBtn">💬</div>
-
-    <div class="contact-dialog" id="contactDialog">
-        <div class="dialog-header">
-            <h4>Need Help?</h4>
-            <span class="close-btn" id="closeDialog">&times;</span>
-        </div>
-        <div class="dialog-body">
-            <p>How would you like to reach us?</p>
-            <div class="dialog-actions">
-                <a href="tel:+916280700763" class="action-btn call-btn">📞 Request a Call</a>
-                <a href="https://wa.me/916280700763" target="_blank" class="action-btn wa-btn">📱 WhatsApp Us</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Modal Window / Contact Box Dialog Controls
-        const contactBtn = document.getElementById('contactBtn');
-        const contactDialog = document.getElementById('contactDialog');
-        const closeDialog = document.getElementById('closeDialog');
-
-        if (contactBtn) {
-            contactBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                contactDialog.classList.toggle('active');
-            });
-        }
-
-        if (closeDialog) {
-            closeDialog.addEventListener('click', () => {
-                contactDialog.classList.remove('active');
-            });
-        }
-
-        document.addEventListener('click', (event) => {
-            if (contactDialog.classList.contains('active') && 
-                !contactDialog.contains(event.target) && 
-                !contactBtn.contains(event.target)) {
-                contactDialog.classList.remove('active');
-            }
-        });
-        
-        if (contactDialog) {
-            contactDialog.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        }
-    </script>
 </body>
 </html>
