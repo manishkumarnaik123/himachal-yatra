@@ -22,7 +22,7 @@
     <section id="hero">
         <h1>Discover Your Next Adventure</h1>
         <p>Explore the most beautiful destinations in Himachal with premium stays, expert guides, and carefully planned tours.</p>
-        <a href="package.html" class="btn hero-btn">Explore Tours</a>
+        <a href="#packages" class="btn hero-btn">Explore Tours</a>
     </section>
 
     <section id="packages">
@@ -93,6 +93,27 @@
         </div>
     </section>
 
+    <section id="reviews" class="services-section">
+        <h2 class="section-title">Leave a Review</h2>
+        <div class="review-form-box">
+            <form id="reviewForm">
+                <input type="text" id="reviewName" placeholder="Your Name" required>
+                <input type="text" id="reviewPlace" placeholder="Place / Trip Name" required>
+                <select id="reviewRating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">5 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <textarea id="reviewMessage" rows="4" placeholder="Write your review here..." required></textarea>
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+            <a href="reviews.html" class="btn secondary-btn review-link">View All Reviews</a>
+        </div>
+    </section>
+
     <section id="services" class="services-section">
         <h2 class="section-title">Why Choose Us</h2>
         <div class="services-grid">
@@ -118,7 +139,7 @@
         <div class="footer-content">
             <div>
                 <h4>Himachal-Yatra</h4>
-                <p>Making your travel dreams a reality since 2025. Your journey begins with us.</p>
+                <p>Making your travel dreams a reality since 2015. Your journey begins with us.</p>
             </div>
             <div>
                 <h4>Quick Links</h4>
@@ -133,7 +154,7 @@
                 <ul>
                     <li>📞 +91 6280700763</li>
                     <li>📱 WhatsApp: +91 6280700763</li>
-                    <li>👤 Pankaj Naik</li>
+                    <li>👤 Manish</li>
                     <li>✉️ himachal-yatra@gmail.com</li>
                     <li>📍 Bilaspur, Himachal Pradesh</li>
                 </ul>
@@ -172,6 +193,7 @@
         const contactBtn = document.getElementById('contactBtn');
         const contactDialog = document.getElementById('contactDialog');
         const closeDialog = document.getElementById('closeDialog');
+        const reviewForm = document.getElementById('reviewForm');
 
         function closeContactDialog() {
             contactDialog.classList.remove('active');
@@ -206,6 +228,27 @@
                 contactDialog.classList.add('active');
             }
         });
+
+        if (reviewForm) {
+            reviewForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const review = {
+                    name: document.getElementById('reviewName').value.trim(),
+                    place: document.getElementById('reviewPlace').value.trim(),
+                    rating: document.getElementById('reviewRating').value,
+                    message: document.getElementById('reviewMessage').value.trim(),
+                    date: new Date().toLocaleDateString()
+                };
+
+                const reviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
+                reviews.unshift(review);
+                localStorage.setItem('himachalReviews', JSON.stringify(reviews));
+
+                reviewForm.reset();
+                alert('Thank you! Your review has been published.');
+            });
+        }
     </script>
 </body>
 </html>
