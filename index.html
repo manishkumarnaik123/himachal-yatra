@@ -258,17 +258,24 @@
                     name: document.getElementById('reviewName').value.trim(),
                     place: document.getElementById('reviewPlace').value.trim(),
                     rating: document.getElementById('reviewRating').value,
-                    message: document.getElementById('reviewMessage').value.trim(),
-                    date: new Date().toLocaleDateString(),
-                    source: 'pending'
+                    message: document.getElementById('reviewMessage').value.trim()
                 };
 
-                const reviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
-                reviews.unshift(review);
-                localStorage.setItem('himachalReviews', JSON.stringify(reviews));
+                // Replace with your Google Apps Script deployment URL
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwwEacMn2e197QH2lPISVp6KsOXB9aOnFsgEL_LM2oC5wAHD5uyrMVhzIGsO7EVka8Hbw/exec';
 
-                reviewForm.reset();
-                alert('Thank you! Your review has been submitted and is pending approval.');
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(review)
+                })
+                .then(response => {
+                    reviewForm.reset();
+                    alert('Thank you! Your review has been published.');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error submitting review. Please try again.');
+                });
             });
         }
     </script>
