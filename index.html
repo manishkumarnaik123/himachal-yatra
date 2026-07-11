@@ -94,23 +94,45 @@
     </section>
 
     <section id="reviews" class="services-section">
-        <h2 class="section-title">Leave a Review</h2>
+        <h2 class="section-title">Share Your Experience</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #555; font-size: 1.1rem;">We'd love to hear about your Himachal adventure! Leave a review and help other travelers discover their perfect journey.</p>
         <div class="review-form-box">
             <form id="reviewForm">
-                <input type="text" id="reviewName" placeholder="Your Name" required>
-                <input type="text" id="reviewPlace" placeholder="Place / Trip Name" required>
-                <select id="reviewRating" required>
-                    <option value="">Select Rating</option>
-                    <option value="5">5 Star</option>
-                    <option value="4">4 Star</option>
-                    <option value="3">3 Star</option>
-                    <option value="2">2 Star</option>
-                    <option value="1">1 Star</option>
-                </select>
-                <textarea id="reviewMessage" rows="4" placeholder="Write your review here..." required></textarea>
-                <button type="submit" class="btn">Submit Review</button>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reviewName">Your Name</label>
+                        <input type="text" id="reviewName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewPlace">Package / Destination</label>
+                        <input type="text" id="reviewPlace" placeholder="e.g., Shimla 5-Day Tour" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reviewRating">Rating</label>
+                        <select id="reviewRating" required>
+                            <option value="">Select your rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Good</option>
+                            <option value="3">⭐⭐⭐ Average</option>
+                            <option value="2">⭐⭐ Fair</option>
+                            <option value="1">⭐ Poor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="reviewMessage">Your Review</label>
+                    <textarea id="reviewMessage" rows="5" placeholder="Share your experience... What did you enjoy most? Any suggestions for improvement?" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Publish Review</button>
+                    <a href="reviews.html" class="btn secondary-btn">View All Reviews</a>
+                </div>
             </form>
-            <a href="reviews.html" class="btn secondary-btn review-link">View All Reviews</a>
         </div>
     </section>
 
