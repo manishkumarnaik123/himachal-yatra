@@ -124,8 +124,7 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#packages">Tours</a></li>
-                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="#packages">Packages</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -135,7 +134,7 @@
                     <li>📞 +91 6280700763</li>
                     <li>📱 WhatsApp: +91 6280700763</li>
                     <li>👤 Manish</li>
-                    <li>✉️ himachalyatra@gmail.com</li>
+                    <li>✉️ himachal-yatra@gmail.com</li>
                     <li>📍 Bilaspur, Himachal Pradesh</li>
                 </ul>
             </div>
@@ -201,6 +200,12 @@
         if (contactDialog) {
             contactDialog.addEventListener('click', (e) => e.stopPropagation());
         }
+
+        window.addEventListener('load', () => {
+            if (contactDialog) {
+                contactDialog.classList.add('active');
+            }
+        });
     </script>
 </body>
 </html>
