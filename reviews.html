@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal-Yatra | Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Himachal-Yatra</a>
+        <nav>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#packages">Packages</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="index.html#reviews" class="btn">Leave a Review</a>
+    </header>
+
+    <section class="page-hero">
+        <h1>Traveler Reviews</h1>
+        <p>Read what our guests loved about their Himachal journey and share your own experience.</p>
+    </section>
+
+    <section class="page-section">
+        <div id="reviewsList" class="review-list"></div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <h4>Himachal-Yatra</h4>
+                <p>Making your travel dreams a reality since 2015. Your journey begins with us.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#packages">Packages</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>📞 +91 6280700763</li>
+                    <li>📱 WhatsApp: +91 6280700763</li>
+                    <li>✉️ himachal-yatra@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2026 Himachal-Yatra Travel Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const reviewsList = document.getElementById('reviewsList');
+
+        function renderReviews() {
+            const reviews = JSON.parse(localStorage.getItem('himachalReviews') || '[]');
+
+            if (!reviews.length) {
+                reviewsList.innerHTML = '<div class="empty-state"><h3>No reviews yet</h3><p>Be the first traveler to share your experience.</p></div>';
+                return;
+            }
+
+            reviewsList.innerHTML = reviews.map((review) => {
+                const stars = '★'.repeat(Number(review.rating || 5));
+                return `
+                    <article class="review-card">
+                        <div class="review-card-top">
+                            <h3>${review.name}</h3>
+                            <span class="review-rating">${stars}</span>
+                        </div>
+                        <p class="review-place">${review.place}</p>
+                        <p>${review.message}</p>
+                        <span class="review-date">${review.date}</span>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        renderReviews();
+    </script>
+</body>
+</html>
